@@ -17,13 +17,14 @@
     </div>
 
     <div class="container my-3">
+      <div id="size" hidden>{{allTodo|length}}</div>
 
       {% if allTodo|length == 0 %}
       <div class="alert alert-dark" role="alert">
         No Todo Found. Please Add Todo!
       </div>
       {% else %}
-      <table class="table table-hover">
+      <table class="table" id ="table1">
         <thead>
           <tr>
             <th scope="col">SNo</th>
@@ -42,7 +43,7 @@
             <td>{{todo.Desc}}</td>
             <td>{{todo.Date_Created}}</td>
             <td>
-              <a href="/update/{{todo.SNo}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Update</a>
+              <a href="/update/{{todo.SNo}}" type="button" class="btn btn-outline-dark btn-sm mx-1" name="upbtn">Update</a>
               <a href="/delete/{{todo.SNo}}" type="button" class="btn btn-outline-danger btn-sm mx-1">Delete</a>
             </td>
           </tr>
@@ -50,6 +51,9 @@
         </tbody>
       </table>
     </div>
+
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
