@@ -1,4 +1,7 @@
+body{
+    background-color: #b2dfdb;
+}
 .dark-mode{
-    filter: invert(1) hue-rotate(180deg);
-    background-color: black;
+    color:wheat;
+    background-color:#263238;
 }
